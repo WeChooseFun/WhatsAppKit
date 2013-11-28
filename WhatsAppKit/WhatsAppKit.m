@@ -40,6 +40,8 @@
         [urlString appendFormat:@"text=%@&", [message urlEncode]];
     }
     
+	NSLog(@"%@", urlString);
+	
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 

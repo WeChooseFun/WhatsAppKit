@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<ABPeoplePickerNavigationControllerDelegate>
 
 - (IBAction)launchWhatsApp:(UIButton *)sender;
 - (IBAction)launchWhatsAppWithMessage:(UIButton *)sender;
 
+
+
+
+//marc
+
+@property (weak, nonatomic) IBOutlet UILabel *firstName;
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumber;
+
+- (IBAction)showPicker:(UIButton *)sender;
 
 @end
